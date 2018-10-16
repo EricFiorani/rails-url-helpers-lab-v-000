@@ -10,7 +10,7 @@ class StudentsController < ApplicationController
 
   def activate
     @student = set_student
-    @student.active = != @student.active
+    @student.active = !@student.active
     @student.save
 
     redirect_to student_path(@stundent)
